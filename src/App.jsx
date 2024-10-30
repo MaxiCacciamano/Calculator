@@ -5,7 +5,8 @@ function App() {
 
   return (
     <>
-    <Calculator/>
+    <h1 className='text-3xl font-bold underline'>Hola</h1>
+    <Calculator />
     </>
   )
 }

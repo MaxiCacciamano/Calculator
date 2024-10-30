@@ -8,8 +8,8 @@ export const Calculator = () => {
   return (
     <div>
         <Display value={result !== null ? result:input||"0"} />
-        <div >
-            <button  label='c' onClick={clearInput}>C</button>
+        <div style={{display:'flex'}}>
+            <button label='c' onClick={clearInput}>C</button>
                 {[1,2,3,4,5,6,7,8,9,0].map((num)=>(
                     <button style={{color:'white'}} key={num} label={num.toString()} onClick={()=> handleInput(num.toString())}> {num} </button>
                 ))}
