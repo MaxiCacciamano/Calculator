@@ -7,31 +7,59 @@ export const Calculator = () => {
 
   return (
     <div>
-      <Display value={result !== null ? result : input || "0"} />
-      <div style={{ display: 'grid', gridTemplateColumns: "repeat(4, 1fr)", gap: '20px', padding: '25px' }}>
-        {[1, 2, 3, 4, 5, 6, 7, 8, 9].map((num) => (
-          <button style={{ height: '100%', width: '80px', backgroundColor: 'white', color: 'black', fontWeight: '900' }} key={num} onClick={() => handleInput(num.toString())}>
-            {num}
+      <Display value={result !== null ? result : input || "0"}  />
+      <div style={{ display: 'grid', gridTemplateColumns: "repeat(4, 1fr)", gap: '20px', padding: '10px', backgroundColor:'black' }}>
+        {['7', '8', '9', 'DEL'].map((item) => (
+          <button 
+            key={item} 
+            style={{ height: '100%', width: '80px', backgroundColor: 'white', color: 'black', fontWeight: '900' }} 
+            onClick={() => item === 'DEL' ? clearInput() : handleInput(item)}
+          >
+            {item}
           </button>
         ))}
-        {/* Agrega un espacio vacío para centrar el 0 */}
-            <button style={{ height: '100%', width: '80px', backgroundColor: 'white', color: 'black', fontWeight: '900' }}>
-                .
-            </button>
-        <button style={{ height: '100%', width: '80px', backgroundColor: 'white', color: 'black', fontWeight: '900' }} onClick={() => handleInput('0')}>
-          0
-        </button>
-        <button style={{ height: '100%', width: '80px', backgroundColor: 'white', color: 'black', fontWeight: '900' }}>
-            /
-        </button>
-      {['+', '-', '*'].map((op) => (
-        <button style={{ height: '100%', width: '80px', backgroundColor: 'white', color: 'black', fontWeight: '900' }} key={op} onClick={() => handleInput(op)}>
-          {op}
-        </button>
-      ))}
+        {['4', '5', '6', '+'].map((item) => (
+          <button 
+            key={item} 
+            style={{ height: '100%', width: '80px', backgroundColor: 'white', color: 'black', fontWeight: '900' }} 
+            onClick={() => handleInput(item)}
+          >
+            {item}
+          </button>
+        ))}
+        {['1', '2', '3', '-'].map((item) => (
+          <button 
+            key={item} 
+            style={{ height: '100%', width: '80px', backgroundColor: 'white', color: 'black', fontWeight: '900' }} 
+            onClick={() => handleInput(item)}
+          >
+            {item}
+          </button>
+        ))}
+        {['.', '0', '/', 'x'].map((item) => (
+          <button 
+            key={item} 
+            style={{ height: '100%', width: '80px', backgroundColor: 'white', color: 'black', fontWeight: '900' }} 
+            // onClick={handleInput()}
+          >
+            {item}
+          </button>
+        ))}
       </div>
-      <button label='c' onClick={clearInput}>DEL</button>
-      <button label='=' onClick={calcularResult}>=</button>
+        <div style={{display:'flex', flexDirection:'row', padding:"10px"}}>
+        <button
+        onClick={calcularResult}
+        style={{width:"100%"}}
+         >
+          =
+        </button>
+        <button 
+          style={{height: '100%', width: '100%', backgroundColor: 'white', color: 'black' }} 
+          onClick={calcularResult}
+        >
+          RES
+        </button>
+        </div>
     </div>
   );
 };
