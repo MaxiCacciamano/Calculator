@@ -6,7 +6,7 @@ const Display = ({value}) => <div
     backgroundColor:'white',
     color: 'black',
     /* padding: 10px; */
-    borderRadius: '5px',
+    borderRadius: '9px',
     /* box-sizing: border-box; */
     height: '60px',
     /* align-content: center; */
