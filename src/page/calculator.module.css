@@ -1,0 +1,25 @@
+.button{
+     --bg: #e74c3c;
+    /* border: none;  */
+    /* --text-color: #fff; */
+    /* width: 150px; */
+    /* transition: 0.2s; */
+    /*position: relative;
+    background: var(--bg);
+    padding: 1em;
+    font-weight: bold;
+    border-radius: 5px;
+    text-transform: uppercase;
+    color: var(--text-color);
+    letter-spacing: 1px; */
+    box-shadow: #e5d2d2 2px 4px 0px, #e5d2d2 1px 3px 7px;
+    opacity: 0.8;
+}
+
+.button:hover{
+    /* opacity: 1; */
+}
+/* .button:active {
+    top: 4px;
+    box-shadow: #e5d2d2 0px 3px 2px,#e5d2d2 0px 3px 5px;
+} */
