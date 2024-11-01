@@ -13,37 +13,45 @@ export const Calculator = () => {
         {['7', '8', '9', 'DEL'].map((item) => (
           <button 
             key={item} 
-            style={{width:'80%',height:'40px',margin:'8px auto',fontSize:'32px' ,padding: '0', backgroundColor: 'white', color: 'hsl(221, 14%, 31%)', fontWeight: '700', border: 'none' }} 
+            style={{width:'80%',height:'40px',margin:'8px auto',fontSize:'30px' ,padding: '0', backgroundColor: 'white', color: 'hsl(221, 14%, 31%)', fontWeight: '700', border: 'none' }} 
             onClick={() => item === 'DEL' ? clearInput() : handleInput(item)}
           >
+          <p style={{margin:'-20px auto'}}>
             {item}
+          </p>
           </button>
         ))}
         {['4', '5', '6', '+'].map((item) => (
           <button 
             key={item} 
-            style={{width:'80%',height:'40px',margin:'8px auto',fontSize:'32px' , padding: '0', backgroundColor: 'white', color: 'hsl(221, 14%, 31%)', fontWeight: '700', border: 'none' }} 
+            style={{width:'80%',height:'40px',margin:'8px auto',fontSize:'30px' , padding: '0', backgroundColor: 'white', color: 'hsl(221, 14%, 31%)', fontWeight: '700', border: 'none' }} 
             onClick={() => handleInput(item)}
           >
+          <p style={{margin:'-20px auto'}}>
             {item}
+          </p>
           </button>
         ))}
         {['1', '2', '3', '-'].map((item) => (
           <button 
             key={item} 
-            style={{width:'80%',height:'40px',margin:'8px auto' ,padding: '0',fontSize:'32px' ,backgroundColor: 'white', color: 'hsl(221, 14%, 31%)', fontWeight: '700', border: 'none' }} 
+            style={{width:'80%',height:'40px',margin:'8px auto' ,padding: '0',fontSize:'30px' ,backgroundColor: 'white', color: 'hsl(221, 14%, 31%)', fontWeight: '700', border: 'none' }} 
             onClick={() => handleInput(item)}
           >
+          <p style={{margin:'-20px auto'}}>
             {item}
+          </p>
           </button>
         ))}
         {['.', '0', '/', 'x'].map((item) => (
           <button 
             key={item} 
-            style={{width:'80%',height:'40px',margin:'8px auto',fontSize:'32px' ,padding: '0', backgroundColor: 'white', color: 'hsl(221, 14%, 31%)', fontWeight: '700', border: 'none' }} 
+            style={{width:'80%',height:'40px',margin:'8px auto',fontSize:'30px', textAlign:'center' ,padding: '0', backgroundColor: 'white', color: 'hsl(221, 14%, 31%)', fontWeight: '700', border: 'none' }} 
             onClick={() => handleInput(item)}
           >
+          <p style={{margin:'-23px auto'}}>
             {item}
+          </p>
           </button>
         ))}
       </div>
