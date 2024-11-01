@@ -4,7 +4,7 @@ import { Calculator } from './page/Calculator.jsx'
 function App() {
 
   return (
-    <div style={{width:'400px'}}>
+    <div style={{width:'350px'}}>
     <Calculator />
     </div>
   )
