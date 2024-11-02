@@ -14,10 +14,10 @@ const Display = ({value}) => <div
     textAlign:'end',
     // fontSize:'20px',
     // padding: '10px',
-    marginBottom:'-18px',
     }}
     >
-    <h1 style={{padding:'10px'}}> {value} </h1>
+        
+    <h1 style={{padding:'10px', marginTop:'0', fontSize:'35px'}}> {value} </h1>
     
     </div>
 
