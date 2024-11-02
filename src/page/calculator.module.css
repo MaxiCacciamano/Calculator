@@ -13,13 +13,12 @@
     color: var(--text-color);
     letter-spacing: 1px; */
     /* box-shadow: #e5d2d2 2px 4px 0px, #e5d2d2 1px 3px 7px; */
-    box-shadow: #e5d2d2 3px 5px 0px, #e5d2d2 0px 0px 0px;
+    box-shadow: #e5d2d2 0px 5px 0px, #e5d2d2 0px 0px 0px;
     opacity: 0.8;
 }
 
 .button:hover{
     opacity: 1;
-    padding: 10px;
 }
 /* .button:active {
     top: 4px;
