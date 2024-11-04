@@ -14,10 +14,23 @@ const useCalculator = () => {
     //funcion para calcular el resultado
     const calcularResult = ()=>{
         try{
-            setState({input:'', result:eval(input)}) //calcula el resultado de la operacion
+            const evaluarResultado = eval(input)
+            if(isNaN(evaluarResultado)){
+                throw new Error('Resultado no valido.');
+            }
+
+            //actualizo el estado, concatenando el resultado anterior al input
+            const newInput = evaluarResultado.toString() // convierto en cadena
+            //actualizo
+            setState({
+                input: newInput,
+                result: evaluarResultado
+            })
+            console.log()
         }
         catch(err){
             setState({input:'', result: 'Error',err})
+            console.log(err)
         }
     }
 
