@@ -17,7 +17,7 @@ const Display = ({value}) => <div
     }}
     >
         
-    <h1 style={{padding:'10px', marginTop:'0', fontSize:'35px'}}> {value} </h1>
+    <h1 style={{padding:'27px', marginTop:'0', fontSize:'35px'}}> {value} </h1>
     
     </div>
 

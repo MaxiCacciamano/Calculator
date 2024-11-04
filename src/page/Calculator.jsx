@@ -24,7 +24,7 @@ export const Calculator = () => {
     switch(item){
       case 'DEL':
         return <p style={{backgroundColor:'hsl(225, 21%, 49%)',  margin:'0 auto',
-          padding: '6px',
+          padding: '7px',
           borderRadius: '5px'
 
         }}>DEL</p>
@@ -41,7 +41,18 @@ export const Calculator = () => {
 
   return (
     <div>
+     <div style={{display:'flex', justifyContent:'space-between', alignItems:'center'}}>
       <h3 style={{margin:'0', textAlign:'left', fontWeight:'bold', paddingTop:'10px', paddingBottom:'10px'}}>Calc</h3>
+      <div style={{display:'flex', flexDirection:'row', alignItems:'center', gap:'20px'}}>
+      <p style={{fontSize:'12px'}}>THEME</p>
+      <label className="switch">
+        <input type="checkbox" />
+        <input type="checkbox"  />
+        <input type="checkbox"  />
+        <span className="slider"></span>
+      </label>
+      </div>
+     </div>
       <Display value={result !== null ? result : input || "0"} />
       <div style={{ backgroundColor: 'hsl(223, 31%, 20%)', borderRadius: '7px', padding: '13px' }}>
       <div style={{ display: 'grid', gridTemplateColumns: "repeat(4, 1fr)", gap: '0',alignItems:'center'}}>
