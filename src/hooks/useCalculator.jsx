@@ -8,7 +8,11 @@ const useCalculator = () => {
 
     //funciona para actualizar el input
     const handleInput = (value)=>{
-        setState({...state, input: input + value})
+        if( result !== null){
+            setState({...state, input: result +  value, result:null})
+        }else{
+            setState({...state, input:input + value})
+        }
     };
 
     //funcion para calcular el resultado
