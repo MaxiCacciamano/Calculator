@@ -43,7 +43,14 @@ const useCalculator = () => {
         setState(initialState)
     }
 
-    return {input, result, handleInput, calcularResult, clearInput};
+    const clearForDigit = () => {
+         if(input.length > 0){
+             const newInput = input.slice(0, -1);
+             setState({...state, input:newInput, result:null})
+            }
+    }
+
+    return {input, result, handleInput, calcularResult, clearInput, clearForDigit};
     
 }
 

@@ -4,7 +4,7 @@ import useCalculator from '../hooks/useCalculator';
 import style from './calculator.module.css'
 
 export const Calculator = () => {
-  const { input, result, handleInput, calcularResult, clearInput } = useCalculator();
+  const { input, result, handleInput, calcularResult, clearInput, clearForDigit } = useCalculator();
 
 
   function checkItem(item){
@@ -61,7 +61,7 @@ export const Calculator = () => {
           className={style.button}
             key={item} 
             style={{width:'80%',height:'40px',margin:'8px auto',fontSize:'30px' ,padding: '0', backgroundColor: ' hsl(0, 0%, 100%)', color: 'hsl(221, 14%, 31%)', fontWeight: '700', border: 'none' }} 
-            onClick={() => item === 'DEL' ? clearInput() : handleInput(item)}
+            onClick={() => item === 'DEL' ? clearForDigit() : handleInput(item)}
           >
           {/* <p style={{margin:'10px auto'}}> */}
             {checkColor(item)}
@@ -108,7 +108,7 @@ export const Calculator = () => {
       <div style={{ display: 'flex', flexDirection: 'row', padding: "0px" }}>
         <button
         className={style.button}
-          onClick={calcularResult}
+          onClick={clearInput}
           style={{ width: "100%", margin: '8px', backgroundColor:'hsl(225, 21%, 49%)', fontWeight:'bold' }}
         >
           RESET
